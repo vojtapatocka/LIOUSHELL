@@ -1,0 +1,43 @@
+ &switches
+    isotest     =.false.
+	savestate	=0
+	loadstate	=1
+	model		=5
+    layered     =.true.
+    couple      =0
+  &end
+  
+ &params
+ 	MAXSTP		=2000000
+	MAXSTPINI	=1000000
+	rmin		=3480.e3
+	rmax		=6371.e3
+  &end 
+  
+ &proces
+	tstart		=5.e8
+	tmax		=1.e7
+	icetest		=.true.
+	fixload     =0
+    cap_col     =25.
+    cap_lon     =75.
+    hice        =1500.
+    cap_width   =10.
+    rhoice      =1.e4
+    iceslow     =.false.
+    CAkor       =.false.
+    ice00       =.false.
+    quasi_fluid =1
+  &end  
+ 
+ &model_prof
+    r_vinp(1:6)     = 7000.e3, 6301.e3, 5951.e3, 5701.e3, 0., 0.
+    visko_inp(1:4)  = 1.e31, 1.e21, 1.e21, 2.e21
+    shear_inp(1:4)  = 0.50605e11, 0.70363e11, 1.05490e11, 2.28340e11
+    rho_inp(1:4)    = 3037., 3438., 3871., 4978.
+  &end
+
+ &solvers
+    ilibini     =2
+    ilibproc    =0
+  &end
