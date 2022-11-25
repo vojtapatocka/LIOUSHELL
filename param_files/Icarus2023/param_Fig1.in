@@ -1,0 +1,47 @@
+ &switches
+    isotest     =.false.
+	savestate	=1
+	loadstate	=0
+	model		=5
+    layered     =.true.
+    couple      =0
+    wMIA        =1
+    tides       =.true.
+    locked      =.true.
+  &end
+  
+ &params
+ 	MAXSTP		=30000000
+	MAXSTPINI	=1000000
+    fosslit     =.true.
+    doubrel     =.true.
+	sidday      =507773.    ! 5d + 21h + 2m + 53s
+	hostmassf   =1.e10
+  &end 
+  
+ &tpw_load
+	trel		=5.e7
+	tmax		=14.e6
+	icetest	    =.false.
+	fixload     =5
+	load_shape  =2
+    cap_col     =15.
+    cap_lon     =345.
+	Mpoint      =1.5e17
+  &end  
+ 
+ &model_prof
+ 	rmin		    =600.e3
+	rmax	    	=1352.e3
+	rhocore         =5844.8
+    r_vinp(1:6)     = 1400.e3, 1100.e3, 950.e3, 0., 0., 0.
+    visko_inp(1:3)  = 1.0e21, 1.0e21, 1.0e19
+    shear_inp(1:3)  = 3.6e9, 6.2e9, 65.0e9
+    rho_inp(1:3)    = 937., 1193., 3500.
+    lithick         =10.e3
+  &end
+
+ &solvers
+    ilibini     =2
+    ilibproc    =0
+  &end

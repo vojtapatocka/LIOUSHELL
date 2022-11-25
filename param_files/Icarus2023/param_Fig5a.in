@@ -1,0 +1,55 @@
+ &switches
+    isotest     =.false.
+	savestate	=1
+	loadstate	=0
+	model		=1
+    couple      =0
+    wMIA        =1
+    tides       =.true.
+    locked      =.true.
+  &end
+  
+ &params
+ 	MAXSTP		=40000000
+	MAXSTPINI	=1000000
+    sidday      =550800.
+    hostmassf   =0.121161192
+    fosslit     =.false.
+    doubrel     =.true.
+  &end 
+  
+ &tpw_load
+    icetest     =.false.
+    load_shape  =1
+	trel		=6.e9
+	tmax		=2.e9
+    fixload     =5
+    tgrowth     =1.e7
+    sinsmooth   =.false.
+    cap_col     =60.
+    cap_lon     =0.
+    cap_width   =25.
+    hice        =300.
+    rhoice      =1000.
+  &end  
+ 
+ &model_prof
+ 	eta_mode    =3
+	rmin		=1038.e3
+	rmax		=1188.e3
+    rhocore     =1000.
+    rcore_nsync =858.e3
+    rhoc_nsync  =3360.
+    homorho     =950.
+    etaref      =1.e14
+    etamax      =1.e24
+    Gref        =3.49e9
+    lithick     =50.e3
+    dgrain      =10.e-3
+  &end
+
+ &solvers
+    ilibini     =2
+    ilibproc    =0
+    eps0        =1.e-9
+  &end
