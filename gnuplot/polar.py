@@ -150,7 +150,7 @@ plt.ylabel(r"Moments of Inertia [$\times 10^4$]")
 plt.plot(time[i0:],(mommax[i0:] - ball) / ball*nrm, c='C0', linewidth=3.0, label='maximum')
 plt.plot(time[i0:],(mommed[i0:] - ball) / ball*nrm, c='C1', linewidth=3.0, label='medium')
 plt.plot(time[i0:],(mommin[i0:] - ball) / ball*nrm, c='C2', linewidth=3.0, label='minimum')
-if len(compdir)>1:
+if (compdir != 'pure'):
     MIAfile = "../../" + compdir + "/run/MIA.dat"
     mommax2 = np.loadtxt(MIAfile, usecols=(1))
     time2 = np.loadtxt(MIAfile, usecols=(0))
