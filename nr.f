@@ -404,7 +404,7 @@
       SUBROUTINE bandec(a,n,m1,m2,np,mp,al,mpl,indx,d)
       INTEGER m1,m2,mp,mpl,n,np,indx(n)
       REAL d,a(np,mp),al(np,mpl),TINY
-      PARAMETER (TINY=1.d-20)
+      PARAMETER (TINY=1.d-30)
       INTEGER i,j,k,l,mm
       REAL dum
       mm=m1+m2+1
